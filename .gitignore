@@ -1,0 +1,22 @@
+# Node
+node_modules/
+npm-debug.log*
+
+# WhatsApp session (VERY IMPORTANT)
+auth_info/
+baileys_auth_info/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+
+# Replit
+.replit
+.replit.nix
+
+# OS files
+.DS_Store
+Thumbs.db
