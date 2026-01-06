@@ -68,7 +68,7 @@ Welcome to **Naruto-Bot**, your ultimate WhatsApp companion inspired by the worl
 
 ## 🔗 Links
 - GitHub Repository: [https://github.com/OAD-26/Naruto-Bot](https://github.com/OAD-26/Naruto-Bot)  
-- Vercel Hosting: `naruto-bot-tau.vercel.app` 🌐  
+- Vercel Hosting: `https://naruto-bot-tau.vercel.app/` 🌐  
 
 ---
 
