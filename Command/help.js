@@ -229,6 +229,11 @@ Join our channel for updates:`;
         
         if (fs.existsSync(imagePath)) {
             const imageBuffer = fs.readFileSync(imagePath);
+            const stickerPath = path.join(__dirname, '../Assets/sticker-intro.webp');
+            
+            if (fs.existsSync(stickerPath)) {
+                await sock.sendMessage(chatId, { sticker: fs.readFileSync(stickerPath) }, { quoted: message });
+            }
             
             await sock.sendMessage(chatId, {
                 image: imageBuffer,

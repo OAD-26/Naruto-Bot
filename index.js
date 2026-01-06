@@ -81,7 +81,11 @@ async function startBot() {
     if (!msg.message || msg.key.fromMe) return;
 
     const from = msg.key.remoteJid;
-    const text = msg.message.conversation || msg.message.extendedTextMessage?.text || "";
+    const type = Object.keys(msg.message)[0];
+    const text = msg.message.conversation || msg.message.extendedTextMessage?.text || msg.message.imageMessage?.caption || msg.message.videoMessage?.caption || "";
+
+    // Log message type for debugging
+    console.log(`📩 Message from ${from} [${type}]: ${text}`);
 
     if (!text.startsWith(settings.prefix)) return;
 

@@ -17,6 +17,11 @@ module.exports = {
         `;
         
         const imagePath = path.join(__dirname, '../Assets/Bot_Avatar.jpg');
+        const stickerPath = path.join(__dirname, '../Assets/sticker-intro.webp');
+        
+        if (fs.existsSync(stickerPath)) {
+            await sock.sendMessage(jid, { sticker: fs.readFileSync(stickerPath) }, { quoted: msg });
+        }
         
         if (fs.existsSync(imagePath)) {
             const imageBuffer = fs.readFileSync(imagePath);
